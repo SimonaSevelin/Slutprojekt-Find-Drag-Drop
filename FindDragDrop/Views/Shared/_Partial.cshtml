@@ -1,16 +1,31 @@
 ﻿@model IndexVM
 
 <div>
-<img src=https://finddragdropimages.blob.core.windows.net/images/@Model.ObjectList[0].Image class='draggable' id='dragFirst'/>
-
-<table>
-    <tr>
-        <td class='droppable' id='dropFirst'>@Model.ObjectList[0].Word</td>
-    </tr>
-    <tr></tr>
-    <tr></tr>
-
-</table>
-
+    <img src=https://finddragdropimages.blob.core.windows.net/images/@Model.ObjectList[0].Image class='draggable' id='dragFirst' />
 </div>
-     
+<div>
+    <table id="wordTable">
+        <tbody>
+            <tr>
+                <td class='droppable' id='dropFirst'><p>@Model.ObjectList[0].Word</p></td>
+                <td><p>hopp</p></td>
+                <td><p>hopp</p></td>
+
+            </tr>
+            <tr>
+                <td><p>hopp</p></td>
+                <td><p>hopp</p></td>
+                <td><p>hopp</p></td>
+                
+            </tr>
+            <tr>
+                <td><p>hopp</p></td>
+                <td><p>hopp</p></td>
+                <td><p>hopp</p></td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
