@@ -16,8 +16,6 @@ namespace FindDragDrop.Models
             this.context = context;
         }
 
-        //List<ObjectVM> ObjectList = new List<ObjectVM>();
-
         public IndexVM GetAllObjects()
         {
             return new IndexVM
@@ -32,7 +30,15 @@ namespace FindDragDrop.Models
             };
         }
 
-      
+        internal void AddNewUser(LoginVM viewModel)
+        {
+            context.User.Add(new User
+            {
+                Name = viewModel.Name,
+                Password = viewModel.Password
+            });
 
+            context.SaveChanges();
+        }
     }
 }
