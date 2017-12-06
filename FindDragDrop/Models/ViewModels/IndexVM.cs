@@ -8,6 +8,6 @@ namespace FindDragDrop.Models.ViewModels
     public class IndexVM
     {
         public string Name { get; set; }
-        public ObjectVM Object { get; set; }
+        public ObjectVM[] ObjectList { get; set; }
     }
 }

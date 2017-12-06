@@ -1,9 +1,22 @@
-﻿<!DOCTYPE html>
+﻿@model IndexVM
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title> </title>
+    <title></title>
 </head>
 <body>
+    <h1>Find, Drag & Drop</h1>
+    <table>
 
+    @foreach (var item in Model.ObjectList)
+    {
+        <tr>
+            <td><img src="https://finddragdropimages.blob.core.windows.net/images/@item.Image" width="100" /></td>
+            <td>@item.Word</td>
+        </tr>
+    }
+
+    </table>
 </body>
 </html>

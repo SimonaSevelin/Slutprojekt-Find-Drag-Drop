@@ -16,6 +16,23 @@ namespace FindDragDrop.Models
             this.context = context;
         }
 
-        
+        //List<ObjectVM> ObjectList = new List<ObjectVM>();
+
+        public IndexVM GetAllObjects()
+        {
+            return new IndexVM
+            {
+                ObjectList = context.Object
+                .Select(w => new ObjectVM
+                {
+                    Image = w.Image,
+                    Word = w.Word
+                })
+                .ToArray()
+            };
+        }
+
+      
+
     }
 }
