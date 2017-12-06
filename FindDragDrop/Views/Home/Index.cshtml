@@ -7,16 +7,17 @@
 </head>
 <body>
     <h1>Find, Drag & Drop</h1>
-    <table>
 
-    @foreach (var item in Model.ObjectList)
-    {
-        <tr>
-            <td><img src="https://finddragdropimages.blob.core.windows.net/images/@item.Image" width="100" /></td>
-            <td>@item.Word</td>
-        </tr>
-    }
+    <div id="container">
 
-    </table>
+        <div id="main_image"></div>
+
+        
+
+    <div id="myPartialContainer">
+
+    </div>
+    </div>
 </body>
 </html>
+    @*@Html.Partial("_Partial")*@

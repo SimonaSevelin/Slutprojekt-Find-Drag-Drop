@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FindDragDrop.Models;
+using FindDragDrop.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -22,6 +23,12 @@ namespace FindDragDrop.Controllers
         {
             var viewModel = repository.GetAllObjects();
             return View(viewModel);
+        }
+
+        public IActionResult GetJson()
+        {
+            var viewModel = repository.GetAllObjects();
+            return Json(viewModel);
         }
     }
 }
