@@ -25,10 +25,10 @@ namespace FindDragDrop.Controllers
             return View(viewModel);
         }
 
-        public IActionResult GetJson()
+        public IActionResult GetObjects()
         {
             var viewModel = repository.GetAllObjects();
-            return Json(viewModel);
+            return PartialView("_Partial", viewModel);
         }
     }
 }

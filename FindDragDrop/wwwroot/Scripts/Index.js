@@ -1,17 +1,17 @@
 ﻿$(document).ready(function () {
 
     $.ajax({
-        url: "/Home/GetJson",
+        url: "/Home/GetObjects",
         type: "GET",
         success: function (result) {
-            $("#myPartialContainer").html(
-                "<img src=https://finddragdropimages.blob.core.windows.net/images/" + result.objectList[0].image + " class='draggable' id='dragFirst'/>" +
-                //"<img src=" + result[1].img + " class='draggable' id='dragSecond'/>" +
-                //"<img src=" + result[2].img + " class='draggable' id='dragThird'/>" +
-                    "<p class= 'droppable' id= 'dropFirst'>" + result.objectList[0].word + "</p >"
-                //"<p class= 'droppable' id= 'dropSecond'>" + result[1].word + "</p >" +
-                //"<p class= 'droppable' id= 'dropThird'>" + result[2].word + "</p >"
-            );
+            $("#myPartialContainer").html(result);
+                //"<img src=https://finddragdropimages.blob.core.windows.net/images/" + result.objectList[0].image + " class='draggable' id='dragFirst'/>" +
+                ////"<img src=" + result[1].img + " class='draggable' id='dragSecond'/>" +
+                ////"<img src=" + result[2].img + " class='draggable' id='dragThird'/>" +
+                //    "<p class= 'droppable' id= 'dropFirst'>" + result.objectList[0].word + "</p >"
+                ////"<p class= 'droppable' id= 'dropSecond'>" + result[1].word + "</p >" +
+                ////"<p class= 'droppable' id= 'dropThird'>" + result[2].word + "</p >"
+            
 
 
 
